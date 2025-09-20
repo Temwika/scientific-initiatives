@@ -7,6 +7,21 @@
     <meta name="description" content="Connecting local innovations to global health & development goals across Zambia">
     
     <!-- Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#f97316', // Orange from logo
+                            light: '#fdba74',
+                            dark: '#ea580c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Alpine.js -->
@@ -88,16 +103,12 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-4">
                     <div class="relative">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzAiIHN0cm9rZT0iIzEwYjk4MSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI0IiBzdHJva2U9IiMwZWE1ZTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjAgMjBIMjhWMjhIMjBWMjBaIiBmaWxsPSIjZjk3MzE2Ii8+CjxwYXRoIGQ9Ik0zNiAyMEg0NFYyOEgzNlYyMFoiIGZpbGw9IiNmOTczMTYiLz4KPHA+dGggZD0iTTI4IDI4SDM2VjM2SDI4VjI4WiIgZmlsbD0iI2Y5NzMxNiIvPgo8cGF0aCBkPSJNMjQgMzZIMjhWNDRIMjRWMzZaIiBmaWxsPSIjZGMzNjI2Ii8+CjxwYXRoIGQ9Ik0zNiAzNkg0MFY0NEgzNlYzNloiIGZpbGw9IiNkYzM2MjYiLz4KPHA+dGggZD0iTTI4IDQwSDM2VjQ0SDI4VjQwWiIgZmlsbD0iI2RjMzYyNiIvPgo8L3N2Zz4K" 
-                             alt="Scientific Initiatives Zambia Logo" 
-                             class="h-12 w-12 logo-shadow">
+                        <a href="/">
+                            <img src="/images/sihdz_main.png" alt="Scientific Initiatives Zambia Logo" class="h-28 w-28 logo-shadow">
+                        </a>
                     </div>
-                    <div>
-                        <h1 class="text-xl font-bold" 
-                            :class="scrolled ? 'text-gray-800' : 'text-white'">SIZ</h1>
-                        <p class="text-xs font-medium" 
-                           :class="scrolled ? 'text-green-600' : 'text-green-200'">Scientific Initiatives</p>
-                    </div>
+                    
+                    
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -143,12 +154,9 @@
         
         <div class="container mx-auto px-6 text-center text-white relative z-10">
             <div class="max-w-5xl mx-auto">
-                <!-- Logo Display -->
+  
                 <div class="mb-12">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU1IiBzdHJva2U9IiMxMGI5ODEiIHN0cm9rZS13aWR0aD0iOCIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgc3Ryb2tlPSIjMGVhNWU5IiBzdHJva2Utd2lkdGg9IjQiLz4KPHA+dGggZD0iTTM1IDM1SDUyVjUySDM1VjM1WiIgZmlsbD0iI2Y5NzMxNiIvPgo8cGF0aCBkPSJNNjggMzVIODVWNTJINjhWMzVaIiBmaWxsPSIjZjk3MzE2Ii8+CjxwYXRoIGQ9Ik01MiA1Mkg2OFY2OEg1MlY1MloiIGZpbGw9IiNmOTczMTYiLz4KPHA+dGggZD0iTTQ1IDY4SDUyVjg1SDQ1VjY4WiIgZmlsbD0iI2RjMzYyNiIvPgo8cGF0aCBkPSJNNjggNjhINzVWODVINjhWNjhaIiBmaWxsPSIjZGMzNjI2Ii8+CjxwYXRoIGQ9Ik01MiA3NUg2OFY4NUg1MlY3NVoiIGZpbGw9IiNkYzM2MjYiLz4KPC9zdmc+Cg==" 
-                         alt="SIZ Logo" 
-                         class="h-24 w-24 mx-auto mb-6 logo-shadow">
-                </div>
+             </div>
 
                 <!-- Dynamic Content -->
                 <template x-for="(slide, index) in slides" :key="index">
@@ -355,34 +363,31 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-[#f97316] text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center items-center mb-6">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTgiIHN0cm9rZT0iIzEwYjk4MSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE0IiBzdHJva2U9IiMwZWE1ZTkiIHN0cm9rZS13aWR0aD0iMSIvPgo8cGF0aCBkPSJNMTIgMTJIMTZWMTZIMTJWMTJaIiBmaWxsPSIjZjk3MzE2Ii8+CjxwYXRoIGQ9Ik0yNCAxMkgyOFYxNkgyNFYxMloiIGZpbGw9IiNmOTczMTYiLz4KPHA+dGggZD0iTTE2IDE2SDI0VjI0SDE2VjE2WiIgZmlsbD0iI2Y5NzMxNiIvPgo8cGF0aCBkPSJNMTQgMjRIMTZWMjhIMTRWMjRaIiBmaWxsPSIjZGMzNjI2Ii8+CjxwYXRoIGQ9Ik0yNCAyNEgyNlYyOEgyNFYyNFoiIGZpbGw9IiNkYzM2MjYiLz4KPHA+dGggZD0iTTE2IDI2SDI0VjI4SDE2VjI2WiIgZmlsbD0iI2RjMzYyNiIvPgo8L3N2Zz4K" 
-                     alt="SIZ Logo" 
-                     class="h-10 w-10 mr-3">
                 <div>
                     <h3 class="text-lg font-bold">Scientific Initiatives Zambia</h3>
-                    <p class="text-sm text-gray-400">Building Healthy Communities</p>
+                    <p class="text-sm text-orange-100">Building Healthy Communities</p>
                 </div>
             </div>
             
             <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="#" class="w-10 h-10 bg-gradient-to-r from-[#f97316] to-orange-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="#" class="w-10 h-10 bg-gradient-to-r from-[#f97316] to-orange-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="#" class="w-10 h-10 bg-gradient-to-r from-[#f97316] to-orange-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" class="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <a href="#" class="w-10 h-10 bg-gradient-to-r from-[#f97316] to-orange-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
             
-            <p class="text-gray-400 text-sm">
+            <p class="text-orange-100 text-sm">
                 &copy; 2025 Scientific Initiatives Zambia. All Rights Reserved.
             </p>
         </div>
