@@ -45,42 +45,45 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-orange-100 transition-all duration-300"
-         x-data="{ mobileMenu: false }">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <img src="/images/sihdz_main.png" alt="SIHDZ Logo" class="h-10 w-auto object-contain">
-                    <div class="text-xl font-bold text-gray-900">Scientific Initiatives<br><span class="text-primary text-sm font-medium">Zambia</span></div>
+     x-data="{ mobileMenu: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo (moved left, made bigger and more visible) -->
+            <div class="flex items-center space-x-4">
+                <img src="/images/sihdz_main.png" alt="SIHDZ Logo" class="h-28 w-auto object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+                <div class="text-3xl font-extrabold text-gray-900 ml-2 leading-tight">
+                    Scientific Initiatives<br>
+                    <span class="text-primary text-xl font-bold">Zambia</span>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
-                    <a href="#focus-areas" class="text-gray-700 hover:text-primary font-medium transition-colors">Our Work</a>
-                    <a href="#impact" class="text-gray-700 hover:text-primary font-medium transition-colors">Impact</a>
-                    <a href="#resources" class="text-gray-700 hover:text-primary font-medium transition-colors">Resources</a>
-                    <a href="#partner" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition-colors">Partner with us</a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-700">
-                    <i :class="mobileMenu ? 'fa fa-times' : 'fa fa-bars'" class="text-xl"></i>
-                </button>
             </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="md:hidden" x-show="mobileMenu" x-transition>
-            <div class="bg-white border-t border-orange-100 py-4 px-4 space-y-3">
-                <a href="#about" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">About</a>
-                <a href="#focus-areas" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Our Work</a>
-                <a href="#impact" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Impact</a>
-                <a href="#resources" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Resources</a>
-                <a href="#partner" class="block bg-primary text-white px-6 py-2 rounded-full font-semibold text-center" @click="mobileMenu = false">Partner with us</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+                <a href="#focus-areas" class="text-gray-700 hover:text-primary font-medium transition-colors">Our Work</a>
+                <a href="#impact" class="text-gray-700 hover:text-primary font-medium transition-colors">Impact</a>
+                <a href="#resources" class="text-gray-700 hover:text-primary font-medium transition-colors">Resources</a>
+                <a href="#partner" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition-colors">Partner with us</a>
             </div>
+
+            <!-- Mobile menu button -->
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-700 ml-4">
+                <i :class="mobileMenu ? 'fa fa-times' : 'fa fa-bars'" class="text-xl"></i>
+            </button>
         </div>
-    </nav>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden" x-show="mobileMenu" x-transition>
+        <div class="bg-white border-t border-orange-100 py-4 px-4 space-y-3">
+            <a href="#about" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">About</a>
+            <a href="#focus-areas" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Our Work</a>
+            <a href="#impact" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Impact</a>
+            <a href="#resources" class="block text-gray-700 hover:text-primary font-medium" @click="mobileMenu = false">Resources</a>
+            <a href="#partner" class="block bg-primary text-white px-6 py-2 rounded-full font-semibold text-center" @click="mobileMenu = false">Partner with us</a>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="relative pt-20 pb-16 section-gradient">
